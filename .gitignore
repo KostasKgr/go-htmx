@@ -19,3 +19,10 @@
 
 # Go workspace file
 go.work
+
+
+# Taskfile
+.task
+
+# Built binary
+gohtmx

@@ -1,6 +1,16 @@
 version: '3'
 
+
+interval: 500ms
+
 tasks:
   run:
+    silent: true
     cmds:
-      - go run .
+      - go build .
+      - pkill gohtmx || true # https://github.com/go-task/task/issues/160
+      - ./gohtmx
+    watch: true
+    sources:
+      - '**/*.go'
+      - '**/*.html'
